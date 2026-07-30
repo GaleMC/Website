@@ -1,7 +1,8 @@
 <script lang="ts">
   import { Download, ExternalLink, Tag } from "lucide-svelte";
   import { scrollReveal } from "@/lib/animations";
-  import { t } from "@/lib/i18n";
+  import { t, currentLanguage } from "@/lib/i18n";
+  import { get } from "svelte/store";
 
   interface Props {
     releases: any[];
@@ -9,15 +10,22 @@
   }
 
   let { releases, project }: Props = $props();
+  let lang = $state("en");
 
   function getJarAsset(release: any) {
     return release.assets?.find((a: any) => a.name?.endsWith(".jar")) ?? null;
   }
 
-  const dateFormatter = new Intl.DateTimeFormat("en-GB", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
+  function formatter(locale: string) {
+    return new Intl.DateTimeFormat(locale, {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+  }
+
+  $effect(() => {
+    lang = get(currentLanguage);
   });
 
   function formatSize(bytes: number) {
@@ -62,7 +70,7 @@
                     </a>
                   </div>
                   <p class="text-xs text-neutral-500 mt-0.5">
-                    {dateFormatter.format(new Date(release.published_at))}
+                    {formatter(lang).format(new Date(release.published_at))}
                     {#if jar}
                       <span class="text-neutral-600"> &middot; {formatSize(jar.size)}</span>
                     {/if}
@@ -71,10 +79,10 @@
               </div>
 
               <div class="flex items-center gap-2 shrink-0">
-                {#if release.body}
+                  {#if release.body}
                   <details class="group/details text-xs text-neutral-400">
                     <summary class="cursor-pointer hover:text-neutral-300 transition-colors list-none flex items-center gap-1">
-                      Release notes
+                      {$t("downloads.releaseNotes")}
                       <svg class="size-3 transition-transform group-open/details:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -101,7 +109,7 @@
                     class="inline-flex items-center gap-1.5 rounded-md bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium px-3 py-2 text-neutral-400"
                   >
                     <ExternalLink class="size-4" />
-                    View
+                    {$t("downloads.view")}
                   </a>
                 {/if}
               </div>

@@ -1,0 +1,14 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@/components/Navbar.svelte";
+import Footer from "@/components/Footer.svelte";
+import GradientBackground from "@/components/ui/GradientBackground.svelte";
+import DocsContent from "@/components/DocsContent.svelte";
+---
+
+<Layout title="Documentation">
+  <Navbar slot="navbar" client:load />
+  <GradientBackground client:load />
+  <DocsContent client:load />
+  <Footer slot="footer" client:load />
+</Layout>

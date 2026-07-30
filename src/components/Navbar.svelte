@@ -16,7 +16,7 @@
 
   const LINKS: NavbarItem[] = [
     { href: "/downloads", translationKey: "nav.downloads" },
-    { href: "https://github.com/GaleMC/Gale/wiki", translationKey: "nav.documentation" },
+    { href: "/docs", translationKey: "nav.documentation" },
   ];
 
   const SOCIAL: NavbarItem[] = [

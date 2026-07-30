@@ -1,20 +1,28 @@
 <script lang="ts">
   import { Download, ExternalLink, Tag } from "lucide-svelte";
   import { scrollReveal } from "@/lib/animations";
-  import { t } from "@/lib/i18n";
+  import { t, currentLanguage } from "@/lib/i18n";
+  import { get } from "svelte/store";
 
   interface Props {
     builds: any[];
   }
 
   let { builds }: Props = $props();
+  let lang = $state("en");
 
-  const dateFormatter = new Intl.DateTimeFormat("en-GB", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
+  function formatter(locale: string) {
+    return new Intl.DateTimeFormat(locale, {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  }
+
+  $effect(() => {
+    lang = get(currentLanguage);
   });
 
   function formatSize(bytes: number) {
@@ -52,7 +60,7 @@
               </div>
 
               <div class="hidden sm:block text-xs text-neutral-500 shrink-0">
-                {dateFormatter.format(new Date(release.publishedAt))}
+                {formatter(lang).format(new Date(release.publishedAt))}
               </div>
 
               <div class="text-xs text-neutral-500 shrink-0">
@@ -67,7 +75,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                   class="p-1.5 rounded text-neutral-500 hover:text-neutral-300 transition-colors"
-                  title="View on GitHub"
+                  title={$t("downloads.viewOnGitHub")}
                 >
                   <ExternalLink class="size-4" />
                 </a>
@@ -75,7 +83,7 @@
                   <a
                     href={release.jarDownloadUrl}
                     class="p-1.5 rounded text-neutral-400 hover:text-blue-300 transition-colors"
-                    title="Download JAR"
+                    title={$t("downloads.download")}
                   >
                     <Download class="size-4" />
                   </a>
@@ -93,7 +101,7 @@
           rel="noopener noreferrer"
           class="text-sm text-neutral-500 hover:text-neutral-300 transition-colors"
         >
-          View all releases on GitHub →
+          {$t("downloads.viewAllReleases")} →
         </a>
       </div>
     </div>

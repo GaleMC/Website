@@ -20,35 +20,35 @@ export default {
   features: {
     heading: "Co czyni Canvas wyjątkowym?",
     subheading: "Dowiedz się, co odróżnia Canvas od reszty.",
-    scheduler: {
-      title: "Przerobiony scheduler",
+    zeroChanges: {
+      title: "Zero zmian behawioralnych",
       description:
-        "Canvas jest oparty głównie na nowym schedulerze dla chunków, co czyni Canvas jednym z najszybszych forków Folii.",
+        "Gale nie zmienia niczego w działaniu twojego serwera. Każdy mechanik, każde zachowanie pluginu działa dokładnie tak, jak w Paper. Zero niespodzianek.",
     },
-    chunkGeneration: {
-      title: "Zoptymalizowane generowanie chunków",
+    dropIn: {
+      title: "Zamienniki typu drop-in",
       description:
-        "Dzięki naprawionemu skalowaniu liniowemu, możliwym poprzez przerobienie executora systemu chunków, wydajność chunków jest niezrównanie lepsza w porównaniu z innymi forkami.",
+        "Zastąp swój plik Paper jar-em Gale i natychmiast uzyskaj lepszą wydajność. Bez zmian konfiguracji, bez migracji wtyczek.",
     },
-    configuration: {
-      title: "Obszerna konfiguracja",
+    optimizations: {
+      title: "Dziesiątki optymalizacji",
       description:
-        "Modyfikuj każdy aspekt swojego serwera dzięki udokumentowanej konfiguracji i optymalizacjom",
+        "Poprawki wydajności zebrane z całej społeczności Minecraft, starannie przejrzane i scalone. Każda optymalizacja jest testowana pod kątem zerowych zmian behawioralnych.",
     },
-    community: {
-      title: "Twoje pomysły, nasz kod",
+    hardware: {
+      title: "Optymalizacje nowoczesnego sprzętu",
       description:
-        "Canvas rośnie razem ze swoją społecznością - podziel się funkcjami, które pragniesz zobaczyć, a my postaramy się je wcielić w życie.",
+        "Matematyka przyspieszona SIMD dla kolizji i oświetlenia, Java wirtualne wątki dla równoległego przetwarzania encji.",
     },
-    profiling: {
-      title: "Prawdziwe profilowanie regionów",
+    caching: {
+      title: "Inteligentne buforowanie",
       description:
-        "Canvas posiada profiler Spark z prawdziwego zdarzenia, który jest kompatybilny z region threadingiem, tj. z regionami, zastępując wbudowany profiler Folii.",
+        "Buforowanie lokalne wątków dla chunków, encji, stanów bloków i przepisów. Zmniejsza rywalizację o pamięć i przyspiesza wyszukiwanie.",
     },
-    powerful: {
-      title: "Potężne i szybkie",
+    upstream: {
+      title: "Na bieżąco z Paper",
       description:
-        "Naprawiając wiele błędów i crashów występujących w Folii, Canvas jest szybkie i stabilne",
+        "Regularne scalanie upstream utrzymuje Gale zsynchronizowane z najnowszymi ulepszeniami Paper, poprawkami bezpieczeństwa i wsparciem wersji Minecraft.",
     },
   },
   downloads: {

@@ -1,10 +1,10 @@
 <script lang="ts">
   import {
-    Cpu,
-    RectangleVertical,
-    Database,
-    LogOut,
+    ShieldCheck,
+    ArrowRightLeft,
     Zap,
+    Cpu,
+    Database,
     GitPullRequest,
   } from "@lucide/svelte";
   import { scrollReveal } from "../../lib/animations";
@@ -12,29 +12,29 @@
 
   const FEATURES = [
     {
-      titleKey: "features.simd.title",
-      descriptionKey: "features.simd.description",
-      icon: Cpu,
+      titleKey: "features.zeroChanges.title",
+      descriptionKey: "features.zeroChanges.description",
+      icon: ShieldCheck,
     },
     {
-      titleKey: "features.virtualThreads.title",
-      descriptionKey: "features.virtualThreads.description",
-      icon: RectangleVertical,
-    },
-    {
-      titleKey: "features.caching.title",
-      descriptionKey: "features.caching.description",
-      icon: Database,
-    },
-    {
-      titleKey: "features.despawn.title",
-      descriptionKey: "features.despawn.description",
-      icon: LogOut,
+      titleKey: "features.dropIn.title",
+      descriptionKey: "features.dropIn.description",
+      icon: ArrowRightLeft,
     },
     {
       titleKey: "features.optimizations.title",
       descriptionKey: "features.optimizations.description",
       icon: Zap,
+    },
+    {
+      titleKey: "features.hardware.title",
+      descriptionKey: "features.hardware.description",
+      icon: Cpu,
+    },
+    {
+      titleKey: "features.caching.title",
+      descriptionKey: "features.caching.description",
+      icon: Database,
     },
     {
       titleKey: "features.upstream.title",
