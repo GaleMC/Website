@@ -1,0 +1,35 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Navbar from "@/components/Navbar.svelte";
+import Footer from "@/components/Footer.svelte";
+import GradientBackground from "@/components/ui/GradientBackground.svelte";
+import ProductDownloadHeader from "@/components/ProductDownloadHeader.svelte";
+---
+
+<Layout>
+  <Navbar slot="navbar" client:load />
+  <GradientBackground client:load />
+
+  <main class="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
+    <ProductDownloadHeader
+      client:load
+      titleKey="downloads.products.gale.title"
+      descriptionKey="downloads.products.gale.description"
+      downloadHref="/api/v2/latest"
+      sourceHref="https://github.com/GaleMC/Gale"
+      gradientPattern={`repeating-linear-gradient(
+        90deg,
+        #3b82f6 0%,
+        #60a5fa 15%,
+        #93c5fd 30%,
+        #60a5fa 45%,
+        #3b82f6 60%,
+        #2563eb 75%,
+        #3b82f6 90%,
+        #60a5fa 100%
+      )`}
+    />
+  </main>
+
+  <Footer slot="footer" client:load />
+</Layout>
