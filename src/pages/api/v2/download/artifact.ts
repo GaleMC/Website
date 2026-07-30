@@ -1,18 +1,7 @@
 import type { APIRoute } from "astro";
-
-const REPO = "GaleMC/Gale";
+import { REPO, authHeaders } from "@/lib/github";
 
 export const prerender = false;
-
-function authHeaders(): Record<string, string> {
-  const headers: Record<string, string> = {
-    Accept: "application/vnd.github.v3+json",
-    "User-Agent": "GaleMC-Website",
-  };
-  const token = import.meta.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN;
-  if (token) headers.Authorization = `Bearer ${token}`;
-  return headers;
-}
 
 export const GET: APIRoute = async ({ url }) => {
   const runId = url.searchParams.get("run_id");

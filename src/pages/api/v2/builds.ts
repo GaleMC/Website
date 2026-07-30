@@ -1,17 +1,13 @@
 import type { APIRoute } from "astro";
-
-const REPO = "GaleMC/Gale";
+import { REPO, authHeaders } from "@/lib/github";
 
 export const prerender = false;
 
 export const GET: APIRoute = async () => {
   try {
-    const headers: Record<string, string> = { Accept: "application/vnd.github.v3+json", "User-Agent": "GaleMC-Website" };
-    const token = import.meta.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN;
-    if (token) headers.Authorization = `token ${token}`;
     const res = await fetch(
       `https://api.github.com/repos/${REPO}/releases?per_page=20`,
-      { headers }
+      { headers: authHeaders() }
     );
     if (!res.ok) {
       return new Response(JSON.stringify({ error: "GitHub API error" }), { status: 502 });
