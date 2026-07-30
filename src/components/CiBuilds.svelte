@@ -33,13 +33,14 @@
         <div class="space-y-2">
           {#each builds as release, index (release.id)}
             {@const isLatest = index === 0}
-            <div
-              use:scrollReveal={{ type: "slideUp", start: "top 100%", delay: index * 0.03 }}
-              class="group flex items-center gap-4 px-4 py-3 rounded-lg transition-all hover:bg-white/5"
-              style="border: 1px solid transparent; transition: border-color 0.2s, background 0.2s;"
-              onmouseenter={(e) => (e.currentTarget.style.borderColor = 'rgba(59,130,246,0.2)')}
-              onmouseleave={(e) => (e.currentTarget.style.borderColor = 'transparent')}
-            >
+              <div
+                use:scrollReveal={{ type: "slideUp", start: "top 100%", delay: index * 0.03 }}
+                class="group flex items-center gap-4 px-4 py-3 rounded-lg transition-all hover:bg-white/5"
+                style="border: 1px solid transparent; transition: border-color 0.2s, background 0.2s;"
+                onmouseenter={(e) => (e.currentTarget.style.borderColor = 'rgba(59,130,246,0.2)')}
+                onmouseleave={(e) => (e.currentTarget.style.borderColor = 'transparent')}
+                role="listitem"
+              >
               <div class="flex items-center gap-3 min-w-0 flex-1">
                 {#if isLatest}
                   <span class="inline-flex items-center rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-medium px-2 py-0.5 shrink-0">
