@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: galemc-website
+    runtime: node
+    buildCommand: npm ci && npm run build
+    startCommand: node ./dist/server/entry.mjs
+    envVars:
+      - key: GITHUB_TOKEN
+        sync: false
