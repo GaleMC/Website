@@ -17,7 +17,7 @@
     "@astrojs/check": "^0.9.9",
     "@astrojs/node": "^10.0.6",
     "@astrojs/svelte": "8.0.4",
-    "@astrojs/vercel": "^11.0.4",
+    "@astrojs/vercel": "^10.0.8",
     "@fontsource/geist-mono": "^5.2.7",
     "@fontsource/geist-sans": "^5.2.5",
     "@lucide/svelte": "^1.23.0",
