@@ -27,3 +27,6 @@ pnpm-debug.log*
 
 
 .env
+
+# dev server log
+dev-server.log

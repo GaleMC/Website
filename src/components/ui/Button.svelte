@@ -64,7 +64,7 @@
     {@render children()}
   </a>
 {:else}
-  <button use:hoverScale={"medium"} {type} class={classes} {onclick} {disabled}>
+  <button use:hoverLift={"small"} {type} class={classes} {onclick} {disabled}>
     {@render children()}
   </button>
 {/if}
