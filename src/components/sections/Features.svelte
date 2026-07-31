@@ -1,6 +1,6 @@
 <script lang="ts">
   import {
-    Equal,
+    CircleEqual,
     Play,
     Zap,
     Cpu,
@@ -14,7 +14,7 @@
     {
       titleKey: "features.zeroChanges.title",
       descriptionKey: "features.zeroChanges.description",
-      icon: Equal,
+      icon: CircleEqual,
     },
     {
       titleKey: "features.dropIn.title",
