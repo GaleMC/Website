@@ -27,7 +27,7 @@ export default {
     zeroChanges: {
       title: "Sıfır Davranış Değişikliği",
       description:
-        "Gale, sunucunuzun işleyişini değiştirmez. Her mekanik, her plug-in davranışı Paper'da olduğu gibi çalışır. Sürpriz yok, uyum sorunu yok.",
+        "Gale, sunucunuzun işleyişini değiştirmez. Her mekanik, her plug-in davranışı tam olması gerektiği gibi çalışır. Sürpriz yok, uyum sorunu yok.",
     },
     dropIn: {
       title: "Tak-Çalıştır Değişim",
@@ -37,12 +37,12 @@ export default {
     optimizations: {
       title: "Düzinelerce Optimizasyon",
       description:
-        "Minecraft topluluğundan toplanmış, titizlikle incelenmiş ve birleştirilmiş performans yamaları. Her optimizasyon, sıfır davranış değişikliği garantisiyle test edilir.",
+        "Büyük ve küçük performans iyileştirmeleri, titizlikle incelenmiş ve güncellenmiştir. Her optimizasyon, sıfır davranış değişikliği garantisiyle test edilir.",
     },
     hardware: {
       title: "Modern Donanım Optimizasyonları",
       description:
-        "Çarpışma ve aydınlatma için SIMD-hızlandırılmış matematik, paralel varlık işleme için Java sanal iş parçacıkları ve modern CPU'lar için önbellek-dostu veri yapıları.",
+        "Çarpışma ve aydınlatma için SIMD-hızlandırılmış matematik, paralel işleme için Java sanal iş parçacıkları ve modern CPU'lar için önbellek-dostu veri yapıları.",
     },
     caching: {
       title: "Akıllı Önbellekleme",
@@ -110,13 +110,13 @@ export default {
       aboutGale: "Gale Hakkında",
     },
     links: {
-      githubRepo: "GitHub Deposu",
+      githubRepo: "GitHub",
       downloads: "İndirilenler",
-      githubIssues: "GitHub Sorunları",
+      githubIssues: "Sorunlar",
       license: "Lisans",
     },
     disclaimer:
-      "Bu web sitesi resmi bir Minecraft web sitesi değildir ve Mojang Studios veya Microsoft ile bağlantılı değildir. Tüm ürün ve şirket adları, ilgili sahiplerinin ticari markalarıdır. Bu adların kullanımı herhangi bir onay veya ilişki anlamına gelmez.",
+      "Bu web sitesi Mojang Studios veya Microsoft ile bağlantılı değildir, onlar tarafından onaylanmamıştır ve resmi bir Minecraft web sitesi değildir. Minecraft ve diğer tüm ticari markalar, ilgili sahiplerinin mülkiyetindedir.",
     builtWith: "Şununla oluşturuldu:",
     by: "tarafından",
     team: "ekibi",
@@ -171,29 +171,27 @@ export default {
         title: "Gale Nedir?",
         body1:
           "Gale, Minecraft sunucunuzu hiçbir şeyin çalışma şeklini değiştirmeden daha hızlı çalıştıran, <strong>Paper'ın tak-çalıştır bir alternatifidir</strong>. Paper'da çalışan her plug-in, her redstone düzeneği, her çiftlik Gale'de aynen çalışır — sadece daha iyi performansla.",
-        body2:
-          "Paper, Spigot ve Bukkit üzerine inşa edilmiştir. GPL-3.0 lisansı altındadır.",
       },
       install: {
         title: "Kurulum",
         subtitle: "Paper'dan Gale'e geçmek yaklaşık 30 saniye sürer:",
         step1: {
           title: "En son Gale JAR'ını indirin",
-          desc: "<a href='/downloads/gale' class='text-blue-400 hover:text-blue-300'>İndirme sayfasından</a> veya <a href='https://github.com/GaleMC/Gale/releases' class='text-blue-400 hover:text-blue-300'>GitHub Releases</a> sayfasından.",
+          desc: "<a href='/downloads/gale' class='text-blue-400 hover:text-blue-300'>İndirme sayfasından</a>",
         },
         step2: {
           title: "Başlatma scriptinizdeki JAR'ı değiştirin",
-          desc: "<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>paper-version.jar</code> yerine <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>gale-version.jar</code> yazın.",
+          desc: "<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>paper-version.jar</code> yerine <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>gale-version.jar</code> yazın",
         },
         step3: {
           title: "Sunucunuzu başlatın",
-          desc: "<pre class='mt-1 text-xs text-neutral-400 bg-neutral-900/50 p-2 rounded overflow-x-auto'>java -Xms2G -Xmx4G -jar gale-version.jar nogui</pre>",
+          desc: "<pre class='mt-1 text-xs text-neutral-400 bg-neutral-900/50 p-2 rounded overflow-x-auto'>java -jar gale-version.jar</pre>(<a href='https://flags.sh/'>Aikar'ın flag'lerini</a> kullanmanız önerilir)",
         },
         footer:
           "İşte bu kadar. Hiçbir ayar değişikliği gerekmez. Plug-in göçü yok. Sunucunuz sadece daha hızlı çalışır.",
       },
       building: {
-        title: "Kaynaktan Derleme",
+        title: "Kaynaktan derleme (geliştiriciler için)",
         command:
           "git clone https://github.com/GaleMC/Gale.git\ncd Gale\n./gradlew applyAllPatches\n./gradlew :gale-server:createPaperclipJar",
       },
@@ -201,12 +199,11 @@ export default {
     features: {
       zeroChanges: {
         title: "Sıfır Davranış Değişikliği",
-        body: "Gale'in temel felsefesi. Diğer Paper çatallarının aksine Gale, oynanış davranışını değiştirmekten kasıtlı olarak kaçınır. Redstone'unuz, çiftlikleriniz ve plug-in'leriniz Paper'da olduğu gibi çalışır. Vanilla davranışını değiştiren özellikler istiyorsanız, geliştiriciler <a href='https://www.leafmc.one/' class='text-blue-400 hover:text-blue-300'>Leaf</a>'i öneriyor.",
+        body: "Gale'in temel felsefesi: diğer Paper çatallarının çoğunun aksine Gale, herhangi bir oynanış davranışını değiştirmekten kasıtlı olarak kaçınır. Redstone'unuz, çiftlikleriniz ve plug-in'leriniz Paper'da olduğu gibi çalışır.",
       },
       perf: {
         title: "Performans Optimizasyonları",
-        subtitle:
-          "Her biri kaynak kodunda <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>// Gale</code> yorumuyla işaretlenmiş düzinelerce performans yaması.",
+        subtitle: "Düzinelerce ayrı performans yaması:",
         simd: {
           title: "SIMD-Hızlandırılmış İşlemler",
           desc: "Çarpışma, aydınlatma ve matematik işlemlerinde CPU düzeyinde paralellik.",
@@ -225,7 +222,7 @@ export default {
         },
         collections: {
           title: "Optimize Koleksiyonlar",
-          desc: "fastutil, paketlenmiş diziler ve optimize edilmiş kapasiteler.",
+          desc: "Paketlenmiş diziler, fastutil ve optimize edilmiş kapasiteler.",
         },
         allocations: {
           title: "Azaltılmış Tahsisatlar",
@@ -241,13 +238,13 @@ export default {
     },
     faq: {
       q1: "Gale plug-in'lerimle uyumlu mu?",
-      a1: "Evet. Gale, Paper'a herhangi bir API değişikliği yapmaz. Her Bukkit/Paper plug-in'i değişiklik yapılmadan çalışır. Bir plug-in belirli Paper iç detaylarına bağlıysa sorun çıkarabilir, ancak bu plug-in'ler zaten her Paper güncellemesinde bozulma eğilimindedir.",
+      a1: "Evet. Gale, Paper'a herhangi bir API değişikliği yapmaz. Her Bukkit/Paper plug-in'i değişiklik yapılmadan çalışır. Bir plug-in belirli Paper iç uygulama detaylarına dayanıyorsa bozulabilir. Bu plug-in'leri yine de desteklemeye çalışıyoruz. Bir plug-in çalışmazsa lütfen bir <a href='https://github.com/GaleMC/Gale/issues' class='text-blue-400 hover:text-blue-300'>GitHub Issue</a> açın.",
       q2: "Ayarlarımı değiştirmem gerekir mi?",
       a2: "Hayır. Mevcut tüm Paper yapılandırma dosyalarınız (<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>paper-global.yml</code>, <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>bukkit.yml</code>, <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>spigot.yml</code>, <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>server.properties</code>) değişmeden çalışır. Gale kendi yapılandırma dosyalarını oluşturur ancak varsayılanlar maksimum performans için ayarlanmıştır — onlara dokunmanıza gerek yok.",
       q3: "Dünya dosyalarım ve oyuncu verilerim çalışır mı?",
       a3: "Evet. Gale, Paper ile aynı dünya formatını kullanır. Dünyalarınız, oyuncu verileriniz ve diğer her şey %100 uyumludur.",
       q4: "Redstone düzeneklerim ve çiftliklerim bozulur mu?",
-      a4: "Hayır. Geliştiriciler, çiftliklerin bağımlı olabileceği hataları düzeltmekten kasıtlı olarak kaçınır. Redstone ve çiftlik davranışı Paper ile aynıdır.",
+      a4: "Hayır. Geliştiriciler, çiftliklerin bağımlı olabileceği davranışları değiştirmekten kasıtlı olarak kaçınır. Redstone ve çiftlik davranışı Paper ile aynıdır.",
       q5: "Gale, Paper'dan ne kadar daha hızlı?",
       a5: "Gale, hiçbir ödün vermeden her sunucuda Paper'dan kesinlikle daha hızlıdır. En büyük kazanımlar, çok sayıda varlık, sık yığın işlemi ve yüksek oyuncu sayısı olan sunuculardadır. Kesin rakamlar sunucu kurulumunuza bağlıdır ancak sıfır çabayla anlamlı iyileştirmeler bekleyin.",
       q6: "Vanilla davranışını değiştiren özelliklere ihtiyacım olursa?",
@@ -259,7 +256,7 @@ export default {
       items: {
         serverWontStart: {
           title: "Sunucu başlamıyor",
-          desc: "Java 21 veya üstü kullandığınızdan emin olun. Gale, sanal iş parçacığı desteği için modern Java gerektirir. Başlatma scriptinizdeki Java sürümünü kontrol edin.",
+          desc: "Java 25 veya üstü kullandığınızdan emin olun. Başlatma scriptinizde doğru jar dosyasına (<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>gale-&lt;version&gt;.jar</code>) işaret ettiğinizi kontrol edin.",
         },
         pluginIncompat: {
           title: "Plug-in uyumsuzluğu",
@@ -267,7 +264,7 @@ export default {
         },
         performance: {
           title: "Performans beklenenden kötü",
-          desc: "Gale'in yanında başka sunucu yazılımı çalıştırmadığınızdan emin olun. Başlatma parametrelerinizin uygun bellek ayarlarını (-Xms/-Xmx) içerdiğini kontrol edin. Sorun devam ederse, <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a>'dan yardım isteyin.",
+          desc: "Başlangıç <a href='https://flags.sh/' class='text-blue-400 hover:text-blue-300'>parametrelerinizin</a> uygun bellek ayarlarını (<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>-Xms</code>/<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>-Xmx</code>) içerdiğinden emin olun. Sorun devam ederse, <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a>'dan yardım isteyin.",
         },
       },
     },
