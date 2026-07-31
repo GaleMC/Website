@@ -246,8 +246,13 @@ html {
 }
 
 @keyframes gale-shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 .gale-gradient-text {
@@ -280,7 +285,9 @@ html {
   background: var(--card);
   border: 1px solid var(--border);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .glass-card:hover {
@@ -297,7 +304,11 @@ html {
 }
 
 [data-theme="dark"] .glass-card {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.5), rgba(15, 23, 42, 0.3));
+  background: linear-gradient(
+    135deg,
+    rgba(30, 41, 59, 0.5),
+    rgba(15, 23, 42, 0.3)
+  );
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(59, 130, 246, 0.1);
@@ -305,11 +316,17 @@ html {
 
 [data-theme="dark"] .glass-card:hover {
   border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15), inset 0 0 30px rgba(59, 130, 246, 0.03);
+  box-shadow:
+    0 4px 20px rgba(37, 99, 235, 0.15),
+    inset 0 0 30px rgba(59, 130, 246, 0.03);
 }
 
 [data-theme="dark"] .glass-card-dark {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.7),
+    rgba(15, 23, 42, 0.4)
+  );
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(59, 130, 246, 0.08);
@@ -326,10 +343,20 @@ html {
 }
 
 @keyframes wind-sweep {
-  0% { transform: translateX(-100%) rotate(-15deg); opacity: 0; }
-  10% { opacity: 0.3; }
-  90% { opacity: 0.3; }
-  100% { transform: translateX(200%) rotate(-15deg); opacity: 0; }
+  0% {
+    transform: translateX(-100%) rotate(-15deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(200%) rotate(-15deg);
+    opacity: 0;
+  }
 }
 
 .gale-wind {
@@ -338,13 +365,18 @@ html {
 }
 
 .gale-wind::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.04), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(96, 165, 250, 0.04),
+    transparent
+  );
   animation: wind-sweep 8s ease-in-out infinite;
   pointer-events: none;
 }

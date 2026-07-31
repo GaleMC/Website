@@ -52,7 +52,10 @@
         style="border: 1px solid var(--border); background: var(--card);"
       >
         <div class="flex items-center gap-3 mb-4">
-          <div class="flex items-center justify-center w-10 h-10 rounded-lg" style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.15);">
+          <div
+            class="flex items-center justify-center w-10 h-10 rounded-lg"
+            style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.15);"
+          >
             <Icon class="size-5" style="color: rgba(96, 165, 250, 0.9);" />
           </div>
           <h3 class="font-semibold text-[var(--foreground)]">{$t(titleKey)}</h3>
@@ -60,7 +63,13 @@
         <p class="text-sm text-neutral-400 leading-relaxed mb-5">
           {$t(descriptionKey)}
         </p>
-        <Button variant="secondary" class="w-full" {href} target="_blank" rel="noopener noreferrer">
+        <Button
+          variant="secondary"
+          class="w-full"
+          {href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {$t(buttonTextKey)}
         </Button>
       </div>

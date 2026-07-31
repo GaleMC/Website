@@ -6,10 +6,7 @@
   let { class: className = "" }: Props = $props();
 </script>
 
-<div
-  aria-hidden="true"
-  class="fixed inset-0 -z-10 {className}"
->
+<div aria-hidden="true" class="fixed inset-0 -z-10 {className}">
   <div class="absolute inset-0 bg-[var(--background)]"></div>
   <div
     class="absolute top-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full opacity-[0.12] blur-[120px] pointer-events-none"

@@ -27,7 +27,8 @@
 
   onMount(() => {
     mounted = true;
-    selectedLanguage = LANGUAGES.find((l) => l.code === get(currentLanguage)) || LANGUAGES[0];
+    selectedLanguage =
+      LANGUAGES.find((l) => l.code === get(currentLanguage)) || LANGUAGES[0];
     const unsub = currentLanguage.subscribe((code) => {
       selectedLanguage = LANGUAGES.find((l) => l.code === code) || LANGUAGES[0];
     });

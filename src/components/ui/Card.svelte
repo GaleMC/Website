@@ -23,9 +23,7 @@
     scrollDelay = 0,
   }: Props = $props();
 
-  const classes = $derived(
-    `rounded-lg p-8 will-change-transform ${className}`
-  );
+  const classes = $derived(`rounded-lg p-8 will-change-transform ${className}`);
 </script>
 
 {#if enableHover && enableScroll}

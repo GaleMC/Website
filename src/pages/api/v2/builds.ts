@@ -6,7 +6,10 @@ export const prerender = false;
 
 export const GET: APIRoute = async () => {
   try {
-    const headers: Record<string, string> = { Accept: "application/vnd.github.v3+json", "User-Agent": "GaleMC-Website" };
+    const headers: Record<string, string> = {
+      Accept: "application/vnd.github.v3+json",
+      "User-Agent": "GaleMC-Website",
+    };
     const token = import.meta.env.GITHUB_TOKEN || process.env.GITHUB_TOKEN;
     if (token) headers.Authorization = `token ${token}`;
     const res = await fetch(
@@ -14,14 +17,17 @@ export const GET: APIRoute = async () => {
       { headers }
     );
     if (!res.ok) {
-      return new Response(JSON.stringify({ error: "GitHub API error" }), { status: 502 });
+      return new Response(JSON.stringify({ error: "GitHub API error" }), {
+        status: 502,
+      });
     }
     const data = await res.json();
 
     const releases = data
       .filter((r: any) => !r.draft && !r.prerelease)
       .map((r: any) => {
-        const jarAsset = r.assets?.find((a: any) => a.name?.endsWith(".jar")) ?? null;
+        const jarAsset =
+          r.assets?.find((a: any) => a.name?.endsWith(".jar")) ?? null;
         return {
           id: r.id,
           tagName: r.tag_name,
@@ -42,6 +48,8 @@ export const GET: APIRoute = async () => {
       },
     });
   } catch {
-    return new Response(JSON.stringify({ error: "Internal error" }), { status: 500 });
+    return new Response(JSON.stringify({ error: "Internal error" }), {
+      status: 500,
+    });
   }
 };

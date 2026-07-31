@@ -22,10 +22,14 @@ export const GET: APIRoute = async () => {
       { headers: authHeaders() }
     );
     if (!runsRes.ok) {
-      return new Response(JSON.stringify({ error: "GitHub API error" }), { status: 502 });
+      return new Response(JSON.stringify({ error: "GitHub API error" }), {
+        status: 502,
+      });
     }
     const runsData = await runsRes.json();
-    const runs = (runsData.workflow_runs || []).filter((r: any) => r.head_branch === "master" || r.head_branch === "main");
+    const runs = (runsData.workflow_runs || []).filter(
+      (r: any) => r.head_branch === "master" || r.head_branch === "main"
+    );
 
     const builds = await Promise.all(
       runs.map(async (run: any) => {
@@ -49,8 +53,11 @@ export const GET: APIRoute = async () => {
         return {
           id: run.id,
           runNumber: run.run_number,
-          commitId: run.head_commit?.id?.substring(0, 7) || run.head_sha?.substring(0, 7),
-          commitMessage: run.head_commit?.message?.split("\n")[0] || run.display_title || "",
+          commitId:
+            run.head_commit?.id?.substring(0, 7) ||
+            run.head_sha?.substring(0, 7),
+          commitMessage:
+            run.head_commit?.message?.split("\n")[0] || run.display_title || "",
           branch: run.head_branch,
           createdAt: run.created_at,
           htmlUrl: run.html_url,
@@ -62,9 +69,14 @@ export const GET: APIRoute = async () => {
 
     return new Response(JSON.stringify({ builds }), {
       status: 200,
-      headers: { "Content-Type": "application/json", "Cache-Control": "public, max-age=300" },
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "public, max-age=300",
+      },
     });
   } catch {
-    return new Response(JSON.stringify({ error: "Internal error" }), { status: 500 });
+    return new Response(JSON.stringify({ error: "Internal error" }), {
+      status: 500,
+    });
   }
 };

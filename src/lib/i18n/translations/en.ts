@@ -57,8 +57,7 @@ export default {
   },
   downloads: {
     title: "Downloads",
-    subtitle:
-      "Get the latest release of Gale for your Minecraft server.",
+    subtitle: "Get the latest release of Gale for your Minecraft server.",
     selectTitle: "Download Gale",
     downloadLatest: "Download Latest Release",
     sourceCode: "Source Code",
@@ -159,7 +158,8 @@ export default {
   docs: {
     label: "Docs",
     title: "Documentation",
-    subtitle: "Everything you need to know about setting up and running a Gale server.",
+    subtitle:
+      "Everything you need to know about setting up and running a Gale server.",
     sections: {
       gettingStarted: "Getting Started",
       features: "Features",
@@ -169,7 +169,8 @@ export default {
     gettingStarted: {
       whatIsGale: {
         title: "What is Gale?",
-        body1: "Gale is a <strong>drop-in replacement for Paper</strong> that makes your Minecraft server run faster without changing how anything works. Every plugin, every redstone machine, every farm that works on Paper will work identically on Gale — just with better performance.",
+        body1:
+          "Gale is a <strong>drop-in replacement for Paper</strong> that makes your Minecraft server run faster without changing how anything works. Every plugin, every redstone machine, every farm that works on Paper will work identically on Gale — just with better performance.",
         body2: "Built on Paper, Spigot, and Bukkit. Licensed under GPL-3.0.",
       },
       install: {
@@ -187,11 +188,13 @@ export default {
           title: "Start your server",
           desc: "<pre class='mt-1 text-xs text-neutral-400 bg-neutral-900/50 p-2 rounded overflow-x-auto'>java -Xms2G -Xmx4G -jar gale-version.jar nogui</pre>",
         },
-        footer: "That's it. No configuration changes. No plugin migration. Your server just runs faster.",
+        footer:
+          "That's it. No configuration changes. No plugin migration. Your server just runs faster.",
       },
       building: {
         title: "Building from Source",
-        command: "git clone https://github.com/GaleMC/Gale.git\ncd Gale\n./gradlew applyAllPatches\n./gradlew :gale-server:createPaperclipJar",
+        command:
+          "git clone https://github.com/GaleMC/Gale.git\ncd Gale\n./gradlew applyAllPatches\n./gradlew :gale-server:createPaperclipJar",
       },
     },
     features: {
@@ -201,14 +204,34 @@ export default {
       },
       perf: {
         title: "Performance Optimizations",
-        subtitle: "Dozens of individual performance patches, each marked with a <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>// Gale</code> comment in the source code.",
-        simd: { title: "SIMD-Accelerated Operations", desc: "CPU-level parallelism for collisions, lighting, and math hot paths." },
-        virtualThreads: { title: "Virtual Threads", desc: "Java virtual threads for parallel entity and chunk processing." },
-        caching: { title: "Extensive Caching", desc: "Thread-local caches for chunks, entities, block states, and recipes." },
-        despawn: { title: "Event-Driven Despawn", desc: "Region-based despawning instead of tick-based scanning." },
-        collections: { title: "Optimized Collections", desc: "fastutil, packed arrays, and tuned capacities throughout." },
-        allocations: { title: "Reduced Allocations", desc: "Reused RandomSource instances, fewer clones, less GC pressure." },
-        fullList: "Full list: <a href='https://github.com/GaleMC/Gale/blob/main/Features.md' class='text-blue-400 hover:text-blue-300'>Features.md</a>",
+        subtitle:
+          "Dozens of individual performance patches, each marked with a <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>// Gale</code> comment in the source code.",
+        simd: {
+          title: "SIMD-Accelerated Operations",
+          desc: "CPU-level parallelism for collisions, lighting, and math hot paths.",
+        },
+        virtualThreads: {
+          title: "Virtual Threads",
+          desc: "Java virtual threads for parallel entity and chunk processing.",
+        },
+        caching: {
+          title: "Extensive Caching",
+          desc: "Thread-local caches for chunks, entities, block states, and recipes.",
+        },
+        despawn: {
+          title: "Event-Driven Despawn",
+          desc: "Region-based despawning instead of tick-based scanning.",
+        },
+        collections: {
+          title: "Optimized Collections",
+          desc: "fastutil, packed arrays, and tuned capacities throughout.",
+        },
+        allocations: {
+          title: "Reduced Allocations",
+          desc: "Reused RandomSource instances, fewer clones, less GC pressure.",
+        },
+        fullList:
+          "Full list: <a href='https://github.com/GaleMC/Gale/blob/main/Features.md' class='text-blue-400 hover:text-blue-300'>Features.md</a>",
       },
       upToDate: {
         title: "Up-to-Date with Paper",
@@ -247,7 +270,8 @@ export default {
         },
       },
     },
-    footer: "Still have questions? Join our <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a> or open a <a href='https://github.com/GaleMC/Gale/issues' class='text-blue-400 hover:text-blue-300'>GitHub Issue</a>.",
+    footer:
+      "Still have questions? Join our <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a> or open a <a href='https://github.com/GaleMC/Gale/issues' class='text-blue-400 hover:text-blue-300'>GitHub Issue</a>.",
   },
   time: {
     justNow: "just now",

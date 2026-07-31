@@ -6,8 +6,14 @@
   const LINKS = [
     { href: "/downloads", labelKey: "footer.links.downloads" },
     { href: siteConfig.links.github.repo, labelKey: "footer.links.githubRepo" },
-    { href: `${siteConfig.links.github.repo}/issues`, labelKey: "footer.links.githubIssues" },
-    { href: `${siteConfig.links.github.repo}/blob/main/LICENSE.md`, labelKey: "footer.links.license" },
+    {
+      href: `${siteConfig.links.github.repo}/issues`,
+      labelKey: "footer.links.githubIssues",
+    },
+    {
+      href: `${siteConfig.links.github.repo}/blob/main/LICENSE.md`,
+      labelKey: "footer.links.license",
+    },
   ];
 
   const currentYear = new Date().getFullYear();
@@ -18,7 +24,9 @@
     <div class="flex flex-col items-center text-center gap-4">
       <a href="/" class="inline-flex items-center gap-2">
         <img src="/logo.png" alt="" width="22" height="22" class="w-5 h-5" />
-        <span class="font-semibold text-sm gale-gradient-text">{siteConfig.name}</span>
+        <span class="font-semibold text-sm gale-gradient-text"
+          >{siteConfig.name}</span
+        >
       </a>
 
       <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
@@ -39,10 +47,14 @@
       </p>
 
       <p class="text-xs text-neutral-600 mt-2">
-        &copy; {currentYear} {siteConfig.name}
+        &copy; {currentYear}
+        {siteConfig.name}
         <span class="mx-1">&middot;</span>
         <span class="inline-flex items-center gap-1">
-          {$t("footer.builtWith")} <Heart class="size-3 inline" fill="currentColor" /> {$t("footer.by")} {$t("footer.team")}
+          {$t("footer.builtWith")}
+          <Heart class="size-3 inline" fill="currentColor" />
+          {$t("footer.by")}
+          {$t("footer.team")}
         </span>
       </p>
     </div>

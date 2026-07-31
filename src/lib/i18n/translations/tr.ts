@@ -57,8 +57,7 @@ export default {
   },
   downloads: {
     title: "İndirilenler",
-    subtitle:
-      "Minecraft sunucunuz için Gale'in en son sürümünü indirin.",
+    subtitle: "Minecraft sunucunuz için Gale'in en son sürümünü indirin.",
     selectTitle: "Gale'i İndir",
     downloadLatest: "En Son Sürümü İndir",
     sourceCode: "Kaynak Kodu",
@@ -159,7 +158,8 @@ export default {
   docs: {
     label: "Dokümanlar",
     title: "Dokümantasyon",
-    subtitle: "Gale sunucusu kurmak ve yönetmek hakkında bilmeniz gereken her şey.",
+    subtitle:
+      "Gale sunucusu kurmak ve yönetmek hakkında bilmeniz gereken her şey.",
     sections: {
       gettingStarted: "Başlarken",
       features: "Özellikler",
@@ -169,8 +169,10 @@ export default {
     gettingStarted: {
       whatIsGale: {
         title: "Gale Nedir?",
-        body1: "Gale, Minecraft sunucunuzu hiçbir şeyin çalışma şeklini değiştirmeden daha hızlı çalıştıran, <strong>Paper'ın tak-çalıştır bir alternatifidir</strong>. Paper'da çalışan her plug-in, her redstone düzeneği, her çiftlik Gale'de aynen çalışır — sadece daha iyi performansla.",
-        body2: "Paper, Spigot ve Bukkit üzerine inşa edilmiştir. GPL-3.0 lisansı altındadır.",
+        body1:
+          "Gale, Minecraft sunucunuzu hiçbir şeyin çalışma şeklini değiştirmeden daha hızlı çalıştıran, <strong>Paper'ın tak-çalıştır bir alternatifidir</strong>. Paper'da çalışan her plug-in, her redstone düzeneği, her çiftlik Gale'de aynen çalışır — sadece daha iyi performansla.",
+        body2:
+          "Paper, Spigot ve Bukkit üzerine inşa edilmiştir. GPL-3.0 lisansı altındadır.",
       },
       install: {
         title: "Kurulum",
@@ -187,11 +189,13 @@ export default {
           title: "Sunucunuzu başlatın",
           desc: "<pre class='mt-1 text-xs text-neutral-400 bg-neutral-900/50 p-2 rounded overflow-x-auto'>java -Xms2G -Xmx4G -jar gale-version.jar nogui</pre>",
         },
-        footer: "İşte bu kadar. Hiçbir ayar değişikliği gerekmez. Plug-in göçü yok. Sunucunuz sadece daha hızlı çalışır.",
+        footer:
+          "İşte bu kadar. Hiçbir ayar değişikliği gerekmez. Plug-in göçü yok. Sunucunuz sadece daha hızlı çalışır.",
       },
       building: {
         title: "Kaynaktan Derleme",
-        command: "git clone https://github.com/GaleMC/Gale.git\ncd Gale\n./gradlew applyAllPatches\n./gradlew :gale-server:createPaperclipJar",
+        command:
+          "git clone https://github.com/GaleMC/Gale.git\ncd Gale\n./gradlew applyAllPatches\n./gradlew :gale-server:createPaperclipJar",
       },
     },
     features: {
@@ -201,14 +205,34 @@ export default {
       },
       perf: {
         title: "Performans Optimizasyonları",
-        subtitle: "Her biri kaynak kodunda <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>// Gale</code> yorumuyla işaretlenmiş düzinelerce performans yaması.",
-        simd: { title: "SIMD-Hızlandırılmış İşlemler", desc: "Çarpışma, aydınlatma ve matematik işlemlerinde CPU düzeyinde paralellik." },
-        virtualThreads: { title: "Sanal İş Parçacıkları", desc: "Paralel varlık ve yığın işleme için Java sanal iş parçacıkları." },
-        caching: { title: "Kapsamlı Önbellekleme", desc: "Yığınlar, varlıklar, blok durumları ve tarifler için iş parçacığı-yerel önbellekler." },
-        despawn: { title: "Olay-Tabanlı Despawn", desc: "Tik-tabanlı tarama yerine bölge-tabanlı despawning." },
-        collections: { title: "Optimize Koleksiyonlar", desc: "fastutil, paketlenmiş diziler ve optimize edilmiş kapasiteler." },
-        allocations: { title: "Azaltılmış Tahsisatlar", desc: "Yeniden kullanılan RandomSource örnekleri, daha az klon, daha az GC baskısı." },
-        fullList: "Tam liste: <a href='https://github.com/GaleMC/Gale/blob/main/Features.md' class='text-blue-400 hover:text-blue-300'>Features.md</a>",
+        subtitle:
+          "Her biri kaynak kodunda <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>// Gale</code> yorumuyla işaretlenmiş düzinelerce performans yaması.",
+        simd: {
+          title: "SIMD-Hızlandırılmış İşlemler",
+          desc: "Çarpışma, aydınlatma ve matematik işlemlerinde CPU düzeyinde paralellik.",
+        },
+        virtualThreads: {
+          title: "Sanal İş Parçacıkları",
+          desc: "Paralel varlık ve yığın işleme için Java sanal iş parçacıkları.",
+        },
+        caching: {
+          title: "Kapsamlı Önbellekleme",
+          desc: "Yığınlar, varlıklar, blok durumları ve tarifler için iş parçacığı-yerel önbellekler.",
+        },
+        despawn: {
+          title: "Olay-Tabanlı Despawn",
+          desc: "Tik-tabanlı tarama yerine bölge-tabanlı despawning.",
+        },
+        collections: {
+          title: "Optimize Koleksiyonlar",
+          desc: "fastutil, paketlenmiş diziler ve optimize edilmiş kapasiteler.",
+        },
+        allocations: {
+          title: "Azaltılmış Tahsisatlar",
+          desc: "Yeniden kullanılan RandomSource örnekleri, daha az klon, daha az GC baskısı.",
+        },
+        fullList:
+          "Tam liste: <a href='https://github.com/GaleMC/Gale/blob/main/Features.md' class='text-blue-400 hover:text-blue-300'>Features.md</a>",
       },
       upToDate: {
         title: "Paper ile Güncel",
@@ -247,7 +271,8 @@ export default {
         },
       },
     },
-    footer: "Hala sorularınız mı var? <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a>'umuza katılın veya bir <a href='https://github.com/GaleMC/Gale/issues' class='text-blue-400 hover:text-blue-300'>GitHub Issue</a> açın.",
+    footer:
+      "Hala sorularınız mı var? <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a>'umuza katılın veya bir <a href='https://github.com/GaleMC/Gale/issues' class='text-blue-400 hover:text-blue-300'>GitHub Issue</a> açın.",
   },
   time: {
     justNow: "şimdi",

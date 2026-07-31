@@ -10,7 +10,7 @@
   }
 
   let { releases, project }: Props = $props();
-  let lang = $state("en");
+  let lang = $derived(get(currentLanguage));
 
   function getJarAsset(release: any) {
     return release.assets?.find((a: any) => a.name?.endsWith(".jar")) ?? null;
@@ -24,10 +24,6 @@
     });
   }
 
-  $effect(() => {
-    lang = get(currentLanguage);
-  });
-
   function formatSize(bytes: number) {
     if (!bytes) return "";
     const mb = bytes / (1024 * 1024);
@@ -37,22 +33,33 @@
 
 <section class="mt-12 sm:mt-16 relative mb-20">
   <div use:scrollReveal={{ type: "slideUp", start: "top 85%" }}>
-    <div class="rounded-lg p-4 sm:p-6" style="border: 1px solid var(--border); background: var(--card);">
+    <div
+      class="rounded-lg p-4 sm:p-6"
+      style="border: 1px solid var(--border); background: var(--card);"
+    >
       {#if releases.length === 0}
-        <p class="text-neutral-300 text-center py-12">{$t("downloads.noBuilds")}</p>
+        <p class="text-neutral-300 text-center py-12">
+          {$t("downloads.noBuilds")}
+        </p>
       {:else}
         <div class="space-y-3">
           {#each releases as release, index (release.id)}
             {@const jar = getJarAsset(release)}
             {@const isLatest = index === 0}
             <div
-              use:scrollReveal={{ type: "slideUp", start: "top 100%", delay: index * 0.05 }}
+              use:scrollReveal={{
+                type: "slideUp",
+                start: "top 100%",
+                delay: index * 0.05,
+              }}
               class="group relative flex flex-col gap-4 border border-neutral-800 rounded-lg p-4 sm:flex-row sm:items-center transition-all duration-200 hover:bg-white/5 hover:border-white/20"
             >
               <div class="flex items-center gap-3 min-w-0 flex-1">
                 <div class="shrink-0">
                   {#if isLatest}
-                    <span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-medium px-2.5 py-0.5">
+                    <span
+                      class="inline-flex items-center gap-1 rounded-full bg-emerald-500/15 text-emerald-400 text-xs font-medium px-2.5 py-0.5"
+                    >
                       {$t("downloads.latest")}
                     </span>
                   {/if}
@@ -72,22 +79,38 @@
                   <p class="text-xs text-neutral-500 mt-0.5">
                     {formatter(lang).format(new Date(release.published_at))}
                     {#if jar}
-                      <span class="text-neutral-600"> &middot; {formatSize(jar.size)}</span>
+                      <span class="text-neutral-600">
+                        &middot; {formatSize(jar.size)}</span
+                      >
                     {/if}
                   </p>
                 </div>
               </div>
 
               <div class="flex items-center gap-2 shrink-0">
-                  {#if release.body}
+                {#if release.body}
                   <details class="group/details text-xs text-neutral-400">
-                    <summary class="cursor-pointer hover:text-neutral-300 transition-colors list-none flex items-center gap-1">
+                    <summary
+                      class="cursor-pointer hover:text-neutral-300 transition-colors list-none flex items-center gap-1"
+                    >
                       {$t("downloads.releaseNotes")}
-                      <svg class="size-3 transition-transform group-open/details:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M19 9l-7 7-7-7" />
+                      <svg
+                        class="size-3 transition-transform group-open/details:rotate-180"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width={2}
+                          d="M19 9l-7 7-7-7"
+                        />
                       </svg>
                     </summary>
-                    <div class="mt-2 p-2 rounded bg-neutral-900/50 max-w-md whitespace-pre-wrap text-xs leading-relaxed max-h-48 overflow-y-auto">
+                    <div
+                      class="mt-2 p-2 rounded bg-neutral-900/50 max-w-md whitespace-pre-wrap text-xs leading-relaxed max-h-48 overflow-y-auto"
+                    >
                       {release.body}
                     </div>
                   </details>

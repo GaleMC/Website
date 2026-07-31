@@ -78,13 +78,20 @@
           class="shrink-0 flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg transition-colors"
           style="background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.15);"
         >
-          <Icon class="size-5 sm:size-5.5" style="color: rgba(96, 165, 250, 0.9);" />
+          <Icon
+            class="size-5 sm:size-5.5"
+            style="color: rgba(96, 165, 250, 0.9);"
+          />
         </div>
         <div class="min-w-0 flex-1">
-          <h3 class="font-semibold text-base sm:text-lg text-[var(--foreground)]">
+          <h3
+            class="font-semibold text-base sm:text-lg text-[var(--foreground)]"
+          >
             {$t(titleKey)}
           </h3>
-          <p class="mt-1.5 text-sm sm:text-base text-neutral-400 leading-relaxed max-w-2xl">
+          <p
+            class="mt-1.5 text-sm sm:text-base text-neutral-400 leading-relaxed max-w-2xl"
+          >
             {$t(descriptionKey)}
           </p>
         </div>

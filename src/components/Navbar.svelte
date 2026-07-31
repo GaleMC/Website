@@ -58,8 +58,17 @@
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <a href="/" class="flex items-center gap-2.5" aria-label={$t("nav.home")}>
-        <img src="/logo.png" alt="" width="28" height="28" class="w-6 h-6 sm:w-7 sm:h-7" />
-        <span class="font-semibold text-sm sm:text-base tracking-wide gale-gradient-text">{siteConfig.name}</span>
+        <img
+          src="/logo.png"
+          alt=""
+          width="28"
+          height="28"
+          class="w-6 h-6 sm:w-7 sm:h-7"
+        />
+        <span
+          class="font-semibold text-sm sm:text-base tracking-wide gale-gradient-text"
+          >{siteConfig.name}</span
+        >
       </a>
 
       <div class="hidden md:flex md:items-center md:gap-8">
@@ -80,7 +89,10 @@
             {/if}
           </a>
         {/each}
-        <div class="flex items-center gap-3 ml-4 pl-4" style="border-left: 1px solid var(--border)">
+        <div
+          class="flex items-center gap-3 ml-4 pl-4"
+          style="border-left: 1px solid var(--border)"
+        >
           {#each SOCIAL as link (link.icon)}
             {@const IconComponent = link.icon}
             <a
@@ -118,7 +130,9 @@
   </div>
 
   {#if isOpen}
-    <div class="border-t border-[var(--border)] bg-[var(--background)] pt-4 pb-3 md:hidden">
+    <div
+      class="border-t border-[var(--border)] bg-[var(--background)] pt-4 pb-3 md:hidden"
+    >
       <div class="space-y-1 px-4">
         {#each LINKS as link (link.href)}
           {@const isActive = currentPath === link.href}
@@ -136,7 +150,9 @@
             {/if}
           </a>
         {/each}
-        <div class="flex items-center gap-3 px-3 pt-3 mt-2 border-t border-[var(--border)]">
+        <div
+          class="flex items-center gap-3 px-3 pt-3 mt-2 border-t border-[var(--border)]"
+        >
           {#each SOCIAL as link (link.icon)}
             {@const IconComponent = link.icon}
             <a
