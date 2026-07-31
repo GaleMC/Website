@@ -48,7 +48,7 @@
       </p>
 
       <p class="text-xs text-neutral-600 mt-2">
-        &copy; {currentYear}
+        &copy; 2022–{currentYear}
         {siteConfig.name}
         <span class="mx-1">&middot;</span>
         <span class="inline-flex items-center gap-1">

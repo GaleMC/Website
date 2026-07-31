@@ -15,7 +15,7 @@ export default {
     badge: "Gale 1.0 — High performance, zero compromises",
     stat1: "Paper fork, no behavioral changes",
     stat2: "Dozens of optimizations",
-    stat3: "Open source",
+    stat3: "Open-source",
     line1: "High performance",
     line2: "Minecraft server software",
   },
@@ -27,7 +27,7 @@ export default {
     zeroChanges: {
       title: "Zero Behavioral Changes",
       description:
-        "Gale changes nothing about how your server runs. Every mechanic, every plugin behavior stays exactly as Paper intended. No surprises, no incompatibilities.",
+        "Gale changes nothing about how your server runs. Every mechanic, every plugin behavior stays exactly as intended. No surprises, no incompatibilities.",
     },
     dropIn: {
       title: "Drop-in Replacement",
@@ -37,12 +37,12 @@ export default {
     optimizations: {
       title: "Dozens of Optimizations",
       description:
-        "Performance patches gathered from across the Minecraft community, carefully reviewed and merged. Every optimization is tested to ensure zero behavioral changes.",
+        "Large and small performance improvements, carefully reviewed and updated. Every optimization is tested to ensure zero behavioral changes.",
     },
     hardware: {
       title: "Modern Hardware Optimizations",
       description:
-        "SIMD-accelerated math for collisions and lighting, Java virtual threads for parallel entity processing, and cache-friendly data structures for modern CPUs.",
+        "SIMD-accelerated math for collisions and lighting, Java virtual threads for parallel processing, and cache-friendly data structures for modern CPUs.",
     },
     caching: {
       title: "Smarter Caching",
@@ -50,7 +50,7 @@ export default {
         "Thread-local caching for chunks, entities, block states, and recipes. Reduces memory contention and speeds up repeated lookups across the board.",
     },
     upstream: {
-      title: "Up-to-Date with Paper",
+      title: "Up-to-date with Paper",
       description:
         "Regular upstream merges keep Gale synchronized with the latest Paper improvements, security fixes, and Minecraft version support.",
     },
@@ -89,7 +89,7 @@ export default {
     label: "Community",
     heading: "Join our community",
     subheading:
-      "Connect with the Gale community, contribute to development, and stay up to date.",
+      "Connect with the Gale community, contribute to development, and stay up-to-date.",
     discord: {
       title: "Discord",
       description:
@@ -99,7 +99,7 @@ export default {
     github: {
       title: "GitHub",
       description:
-        "Contribute to Gale development, report issues, and explore our open source codebase on GitHub.",
+        "Contribute to Gale development, report issues, and explore our open-source codebase on GitHub.",
       action: "View GitHub",
     },
   },
@@ -110,16 +110,16 @@ export default {
       aboutGale: "About Gale",
     },
     links: {
-      githubRepo: "GitHub Repository",
+      githubRepo: "GitHub",
       downloads: "Downloads",
-      githubIssues: "GitHub Issues",
+      githubIssues: "Issues",
       license: "License",
     },
     disclaimer:
-      "This website is not an official Minecraft website and is not associated with Mojang Studios or Microsoft. All product and company names are trademarks or registered trademarks of their respective holders. Use of these names does not imply any affiliation or endorsement by them.",
+      "This website is not affiliated with or endorsed by Mojang Studios or Microsoft and is not an official Minecraft website. Minecraft and all other trademarks are the property of their respective owners.",
     builtWith: "Built with",
     by: "by the",
-    team: "Team",
+    team: "team",
   },
   notFound: {
     title: "404",
@@ -170,29 +170,28 @@ export default {
       whatIsGale: {
         title: "What is Gale?",
         body1:
-          "Gale is a <strong>drop-in replacement for Paper</strong> that makes your Minecraft server run faster without changing how anything works. Every plugin, every redstone machine, every farm that works on Paper will work identically on Gale — just with better performance.",
-        body2: "Built on Paper, Spigot, and Bukkit. Licensed under GPL-3.0.",
+          "Gale is a <strong>drop-in replacement for Paper</strong> that makes your Minecraft server run faster without changing how anything works. Every plugin, every redstone machine, every farm that works on Paper will work identically on Gale — just with better performance."
       },
       install: {
         title: "Installation",
         subtitle: "Switching from Paper to Gale takes about 30 seconds:",
         step1: {
           title: "Download the latest Gale JAR",
-          desc: "From the <a href='/downloads/gale' class='text-blue-400 hover:text-blue-300'>downloads page</a> or <a href='https://github.com/GaleMC/Gale/releases' class='text-blue-400 hover:text-blue-300'>GitHub Releases</a>.",
+          desc: "From the <a href='/downloads/gale' class='text-blue-400 hover:text-blue-300'>downloads page</a>",
         },
         step2: {
           title: "Swap the JAR in your start script",
-          desc: "Replace <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>paper-version.jar</code> with <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>gale-version.jar</code>.",
+          desc: "Replace <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>paper-version.jar</code> with <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>gale-version.jar</code>",
         },
         step3: {
           title: "Start your server",
-          desc: "<pre class='mt-1 text-xs text-neutral-400 bg-neutral-900/50 p-2 rounded overflow-x-auto'>java -Xms2G -Xmx4G -jar gale-version.jar nogui</pre>",
+          desc: "<pre class='mt-1 text-xs text-neutral-400 bg-neutral-900/50 p-2 rounded overflow-x-auto'>java -jar gale-version.jar</pre>(It is recommended to use <a href='https://flags.sh/'>Aikar's flags</a>)",
         },
         footer:
           "That's it. No configuration changes. No plugin migration. Your server just runs faster.",
       },
       building: {
-        title: "Building from Source",
+        title: "Building from source (for developers)",
         command:
           "git clone https://github.com/GaleMC/Gale.git\ncd Gale\n./gradlew applyAllPatches\n./gradlew :gale-server:createPaperclipJar",
       },
@@ -200,12 +199,12 @@ export default {
     features: {
       zeroChanges: {
         title: "Zero Behavioral Changes",
-        body: "Gale's core philosophy. Unlike many other Paper forks, Gale deliberately avoids changing any gameplay behavior. Your redstone, farms, and plugins all work exactly as they do on Paper. If you want features that intentionally change vanilla behavior, the maintainers recommend <a href='https://www.leafmc.one/' class='text-blue-400 hover:text-blue-300'>Leaf</a> instead.",
+        body: "Gale's core philosophy: unlike most other Paper forks, Gale deliberately avoids changing any gameplay behavior. Your redstone, farms, and plugins all work exactly as they do on Paper.",
       },
       perf: {
         title: "Performance Optimizations",
         subtitle:
-          "Dozens of individual performance patches, each marked with a <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>// Gale</code> comment in the source code.",
+          "Dozens of individual performance patches:",
         simd: {
           title: "SIMD-Accelerated Operations",
           desc: "CPU-level parallelism for collisions, lighting, and math hot paths.",
@@ -224,7 +223,7 @@ export default {
         },
         collections: {
           title: "Optimized Collections",
-          desc: "fastutil, packed arrays, and tuned capacities throughout.",
+          desc: "Packed arrays, fastutil and tuned capacities throughout.",
         },
         allocations: {
           title: "Reduced Allocations",
@@ -234,19 +233,19 @@ export default {
           "Full list: <a href='https://github.com/GaleMC/Gale/blob/main/Features.md' class='text-blue-400 hover:text-blue-300'>Features.md</a>",
       },
       upToDate: {
-        title: "Up-to-Date with Paper",
+        title: "Up-to-date with Paper",
         body: "Regular upstream merges keep Gale synchronized with the latest Paper improvements, security fixes, and Minecraft version support. You don't have to choose between performance and being current.",
       },
     },
     faq: {
       q1: "Is Gale compatible with my plugins?",
-      a1: "Yes. Gale makes no API changes to Paper. Every Bukkit/Paper plugin works without modification. If a plugin relies on specific Paper internal implementation details, it might break, but those plugins typically break on every Paper update anyway.",
+      a1: "Yes. Gale makes no API changes to Paper. Every Bukkit/Paper plugin works without modification. If a plugin relies on specific Paper internal implementation details, it might break. We try to support these plugins regardless. Please open a <a href='https://github.com/GaleMC/Gale/issues' class='text-blue-400 hover:text-blue-300'>GitHub Issue</a> if a plugin doesn't work.",
       q2: "Do I need to change my configuration?",
       a2: "No. All your existing Paper configuration files (<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>paper-global.yml</code>, <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>bukkit.yml</code>, <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>spigot.yml</code>, <code class='text-blue-300 bg-blue-500/10 px-1 rounded'>server.properties</code>) work unchanged. Gale does generate its own config files, but the defaults are tuned for maximum performance — you don't need to touch them.",
       q3: "Will my world files and player data work?",
       a3: "Yes. Gale uses the same world format as Paper. Your worlds, player data, and everything else are 100% compatible.",
       q4: "Will my redstone contraptions and farms break?",
-      a4: "No. The developers explicitly avoid fixing bugs that farms might depend on. Redstone and farm behavior is identical to Paper.",
+      a4: "No. The developers explicitly avoid changing behavior that farms might depend on. Redstone and farm behavior is identical to Paper.",
       q5: "How much faster is Gale compared to Paper?",
       a5: "Gale is strictly faster than Paper on every server with no trade-offs. The largest gains are on servers with many entities, frequent chunk operations, and high player counts. Exact numbers depend on your server setup, but expect meaningful improvements with zero effort.",
       q6: "What if I need features that change vanilla behavior?",
@@ -258,7 +257,7 @@ export default {
       items: {
         serverWontStart: {
           title: "Server won't start",
-          desc: "Make sure you're using Java 21 or later. Gale requires modern Java for virtual thread support. Check your startup script for the correct Java version.",
+          desc: "Make sure you're using Java 25 or later. Check that you pointed to the right jar (<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>gale-&lt;version&gt;.jar</code>) in your startup script.",
         },
         pluginIncompat: {
           title: "Plugin incompatibility",
@@ -266,7 +265,7 @@ export default {
         },
         performance: {
           title: "Performance is worse than expected",
-          desc: "Check that you're not running other server software alongside Gale. Make sure your startup flags include appropriate memory settings (-Xms/-Xmx). If the issue persists, reach out on <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a> for help.",
+          desc: "Make sure your <a href='https://flags.sh/' class='text-blue-400 hover:text-blue-300'>startup flags</a> include appropriate memory settings (<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>-Xms</code>/<code class='text-blue-300 bg-blue-500/10 px-1 rounded'>-Xmx</code>). If the issue persists, reach out on <a href='https://discord.gg/gwezNT8c24' class='text-blue-400 hover:text-blue-300'>Discord</a> for help.",
         },
       },
     },
