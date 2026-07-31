@@ -11,7 +11,7 @@
       labelKey: "footer.links.githubIssues",
     },
     {
-      href: `${siteConfig.links.github.repo}/blob/main/LICENSE.md`,
+      href: `${siteConfig.links.github.repo}/blob/main/LICENSE`,
       labelKey: "footer.links.license",
     },
   ];
