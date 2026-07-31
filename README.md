@@ -1,6 +1,7 @@
 # GaleMC website
 
 <!--[![License](https://img.shields.io/github/license/GaleMC/Website?label=License)](https://github.com/GaleMC/Website/blob/main/LICENSE)-->
+
 [![Discord](https://img.shields.io/discord/1045402468416233592?color=5865F2&label=Discord&logo=discord&style=flat-square)](https://discord.gg/RsSrEhDgUb)
 
 The official website for GaleMC.
