@@ -1,7 +1,7 @@
 <script lang="ts">
   import {
-    ShieldCheck,
-    ArrowRightLeft,
+    Unplug,
+    Play,
     Zap,
     Cpu,
     Database,
@@ -14,12 +14,12 @@
     {
       titleKey: "features.zeroChanges.title",
       descriptionKey: "features.zeroChanges.description",
-      icon: ShieldCheck,
+      icon: Unplug,
     },
     {
       titleKey: "features.dropIn.title",
       descriptionKey: "features.dropIn.description",
-      icon: ArrowRightLeft,
+      icon: Play,
     },
     {
       titleKey: "features.optimizations.title",
