@@ -60,7 +60,7 @@
         <p class="text-sm text-neutral-400 leading-relaxed mb-5">
           {$t(descriptionKey)}
         </p>
-        <Button variant="secondary" class="w-full" {href}>
+        <Button variant="secondary" class="w-full" {href} target="_blank" rel="noopener noreferrer">
           {$t(buttonTextKey)}
         </Button>
       </div>

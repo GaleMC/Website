@@ -40,7 +40,7 @@
   }
 
   function handleExternalRedirect(url: string) {
-    window.location.href = url;
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   function handleClick(e: MouseEvent, href: string) {

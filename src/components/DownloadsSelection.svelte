@@ -3,7 +3,7 @@
   import { ArrowRight } from "lucide-svelte";
 </script>
 
-<section class="max-w-4xl mx-auto">
+<section class="max-w-5xl mx-auto">
   <a
     href="/downloads/gale"
     class="group flex items-center gap-5 rounded-lg p-6 transition-all hover:-translate-y-0.5"
