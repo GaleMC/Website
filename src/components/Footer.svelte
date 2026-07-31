@@ -7,7 +7,7 @@
     { href: "/downloads", labelKey: "footer.links.downloads" },
     { href: siteConfig.links.github.repo, labelKey: "footer.links.githubRepo" },
     { href: `${siteConfig.links.github.repo}/issues`, labelKey: "footer.links.githubIssues" },
-    { href: `${siteConfig.links.github.repo}/blob/master/LICENSE.md`, labelKey: "footer.links.license" },
+    { href: `${siteConfig.links.github.repo}/blob/main/LICENSE.md`, labelKey: "footer.links.license" },
   ];
 
   const currentYear = new Date().getFullYear();
