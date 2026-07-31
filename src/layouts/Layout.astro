@@ -9,11 +9,11 @@ interface Props {
   description?: string;
 }
 
-const { title = siteConfig.name, description = siteConfig.description } =
+const { title = siteConfig.siteTitle, description = siteConfig.description } =
   Astro.props;
 
 const fullTitle =
-  title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
+  title === siteConfig.siteTitle ? title : `${title} | ${siteConfig.siteTitle}`;
 ---
 
 <!doctype html>

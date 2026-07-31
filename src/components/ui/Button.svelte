@@ -1,6 +1,6 @@
 <script lang="ts">
   import { type Snippet } from "svelte";
-  import { hoverScale } from "@/lib/animations.ts";
+  import { hoverLift } from "@/lib/animations.ts";
 
   interface Props {
     variant?: "primary" | "secondary" | "ghost";
@@ -53,7 +53,7 @@
 
 {#if href}
   <a
-    use:hoverScale={"medium"}
+    use:hoverLift={"small"}
     {href}
     class={classes}
     {onclick}

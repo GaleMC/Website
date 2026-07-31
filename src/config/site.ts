@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "GaleMC",
+  siteTitle: "Gale",
   url: "https://galemc.org",
   description:
     "A high-performance server fork of Paper, without behavioral changes",

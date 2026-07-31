@@ -42,7 +42,7 @@
 <div class="language-selector relative {className}">
   <button
     onclick={() => (isOpen = !isOpen)}
-    class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors"
+    class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
     title="Change language"
     aria-label="Change language"
     aria-expanded={isOpen}
@@ -63,7 +63,7 @@
         {#each LANGUAGES as lang (lang.code)}
           <button
             onclick={() => handleLanguageChange(lang.code)}
-            class="flex items-center gap-3 w-full px-4 py-2 text-sm text-left hover:bg-white/10 transition-colors {lang.code ===
+            class="flex items-center gap-3 w-full px-4 py-2 text-sm text-left hover:bg-white/10 transition-colors cursor-pointer {lang.code ===
             selectedLanguage.code
               ? 'bg-white/5 text-white'
               : 'text-neutral-300'}"
