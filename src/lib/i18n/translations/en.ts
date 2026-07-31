@@ -170,7 +170,7 @@ export default {
       whatIsGale: {
         title: "What is Gale?",
         body1:
-          "Gale is a <strong>drop-in replacement for Paper</strong> that makes your Minecraft server run faster without changing how anything works. Every plugin, every redstone machine, every farm that works on Paper will work identically on Gale — just with better performance."
+          "Gale is a <strong>drop-in replacement for Paper</strong> that makes your Minecraft server run faster without changing how anything works. Every plugin, every redstone machine, every farm that works on Paper will work identically on Gale — just with better performance.",
       },
       install: {
         title: "Installation",
@@ -203,8 +203,7 @@ export default {
       },
       perf: {
         title: "Performance Optimizations",
-        subtitle:
-          "Dozens of individual performance patches:",
+        subtitle: "Dozens of individual performance patches:",
         simd: {
           title: "SIMD-Accelerated Operations",
           desc: "CPU-level parallelism for collisions, lighting, and math hot paths.",
