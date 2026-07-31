@@ -29,7 +29,9 @@
     use:scrollReveal={{ type: "fadeIn", start: "top 85%" }}
     class="text-center"
   >
+    <!-- Reserved: "Header" (community.label) - re-add later
     <p class="text-xs font-medium uppercase tracking-[0.2em] text-blue-400 mb-3">{$t("community.label")}</p>
+    -->
     <h2 class="font-bold text-3xl sm:text-4xl text-[var(--foreground)]">
       {$t("community.heading")}
     </h2>

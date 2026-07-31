@@ -49,13 +49,17 @@
     use:scrollReveal={{ type: "fadeIn", start: "top 85%" }}
     class="text-center"
   >
+    <!-- Reserved: "Header" (features.label) - re-add later
     <p class="text-xs font-medium uppercase tracking-[0.2em] text-blue-400 mb-3">{$t("features.label")}</p>
+    -->
     <h2 class="font-bold text-3xl sm:text-4xl text-[var(--foreground)]">
       {$t("features.heading")}
     </h2>
+    <!-- Reserved: "Text" (features.subheading) - re-add later
     <p class="mt-3 text-lg text-neutral-400 max-w-xl mx-auto">
       {$t("features.subheading")}
     </p>
+    -->
   </header>
 
   <div class="mt-16 space-y-6">

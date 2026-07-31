@@ -40,6 +40,7 @@
         </Button>
       </div>
 
+      <!-- Reserved: stats (green dots) "Text 1 / Text 2 / Text 3" - re-add later
       <div class="mt-16 flex items-center gap-8 sm:gap-12 text-sm text-neutral-500">
         <div class="flex items-center gap-2">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
@@ -54,6 +55,7 @@
           {$t("hero.stat3")}
         </div>
       </div>
+      -->
     </div>
   </div>
 </section>
