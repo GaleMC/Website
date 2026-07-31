@@ -20,7 +20,7 @@
 </script>
 
 <footer class="border-t border-[var(--border)] bg-[var(--background)]">
-  <div class="mx-auto max-w-5xl px-6 pt-12 pb-16 sm:px-8">
+  <div class="mx-auto max-w-5xl px-6 pt-12 pb-4 sm:px-8">
     <div class="flex flex-col items-center text-center gap-4">
       <a href="/" class="inline-flex items-center gap-2">
         <img src="/logo.png" alt="" width="22" height="22" class="w-5 h-5" />
