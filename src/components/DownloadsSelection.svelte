@@ -6,7 +6,7 @@
 <section class="max-w-5xl mx-auto">
   <a
     href="/downloads/gale"
-    class="group flex items-center gap-5 rounded-lg p-6 transition-all hover:-translate-y-0.5"
+    class="group flex items-center gap-5 rounded-lg p-6 transition-colors"
     style="border: 1px solid var(--border); background: var(--card);"
   >
     <div
