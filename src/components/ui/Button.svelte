@@ -52,7 +52,7 @@
 </script>
 
 {#if href}
-  <a {href} class={classes} {onclick} aria-disabled={disabled} {target} {rel}>
+  <a {href} class={`no-style ${classes}`} {onclick} aria-disabled={disabled} {target} {rel}>
     {@render children()}
   </a>
 {:else}

@@ -20,36 +20,32 @@ export const GET: APIRoute = async ({ url }) => {
     return new Response("Missing run_id", { status: 400 });
   }
 
+  const runPageUrl = `https://github.com/${REPO}/actions/runs/${runId}`;
+
   try {
     const artRes = await fetch(
       `https://api.github.com/repos/${REPO}/actions/runs/${runId}/artifacts`,
       { headers: authHeaders() }
     );
-    if (!artRes.ok) {
-      return new Response("Artifacts not found", { status: 404 });
+    if (artRes.ok) {
+      const artData = await artRes.json();
+      const artifact = (artData.artifacts || [])[0];
+      if (artifact) {
+        const downloadRes = await fetch(artifact.archive_download_url, {
+          headers: authHeaders(),
+          redirect: "manual",
+        });
+        if (downloadRes.status === 301 || downloadRes.status === 302) {
+          const s3Url = downloadRes.headers.get("location");
+          if (s3Url) {
+            return Response.redirect(s3Url, 302);
+          }
+        }
+      }
     }
-
-    const artData = await artRes.json();
-    const artifact = (artData.artifacts || [])[0];
-    if (!artifact) {
-      return new Response("No artifacts for this run", { status: 404 });
-    }
-
-    const downloadRes = await fetch(artifact.archive_download_url, {
-      headers: authHeaders(),
-      redirect: "manual",
-    });
-    if (downloadRes.status !== 302 && downloadRes.status !== 301) {
-      return new Response("Unexpected response from GitHub", { status: 502 });
-    }
-
-    const s3Url = downloadRes.headers.get("location");
-    if (!s3Url) {
-      return new Response("No download URL", { status: 502 });
-    }
-
-    return Response.redirect(s3Url, 302);
   } catch {
-    return new Response("Internal error", { status: 500 });
+    // fall through to GitHub web page
   }
+
+  return Response.redirect(runPageUrl, 302);
 };
