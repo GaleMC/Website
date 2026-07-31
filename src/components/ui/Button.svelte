@@ -1,6 +1,5 @@
 <script lang="ts">
   import { type Snippet } from "svelte";
-  import { hoverLift } from "@/lib/animations.ts";
 
   interface Props {
     variant?: "primary" | "secondary" | "ghost";
@@ -53,7 +52,6 @@
 
 {#if href}
   <a
-    use:hoverLift={"small"}
     {href}
     class={classes}
     {onclick}
@@ -64,7 +62,7 @@
     {@render children()}
   </a>
 {:else}
-  <button use:hoverLift={"small"} {type} class={classes} {onclick} {disabled}>
+  <button {type} class={classes} {onclick} {disabled}>
     {@render children()}
   </button>
 {/if}
