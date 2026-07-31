@@ -20,7 +20,7 @@
 </script>
 
 <footer class="border-t border-[var(--border)] bg-[var(--background)]">
-  <div class="mx-auto max-w-5xl px-6 py-12 sm:px-8">
+  <div class="mx-auto max-w-5xl px-6 pt-12 pb-20 sm:px-8">
     <div class="flex flex-col items-center text-center gap-4">
       <a href="/" class="inline-flex items-center gap-2">
         <img src="/logo.png" alt="" width="22" height="22" class="w-5 h-5" />
@@ -31,10 +31,11 @@
 
       <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
         {#each LINKS as { href, labelKey } (labelKey)}
+          {@const isExternal = href.startsWith("http")}
           <a
             {href}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={isExternal ? "_blank" : undefined}
+            rel={isExternal ? "noopener noreferrer" : undefined}
             class="text-neutral-500 hover:text-neutral-300 transition-colors"
           >
             {$t(labelKey)}
