@@ -16,24 +16,24 @@ if (typeof window !== "undefined") {
 
 export const HOVER_ANIMATIONS = {
   scale: {
-    small: { scale: 1.02, duration: 0.15, ease: "power1.out" },
-    medium: { scale: 1.05, duration: 0.15, ease: "power1.out" },
-    large: { scale: 1.1, duration: 0.15, ease: "power1.out" },
+    small: { scale: 1.02, duration: 0.08, ease: "power1.out" },
+    medium: { scale: 1.05, duration: 0.08, ease: "power1.out" },
+    large: { scale: 1.1, duration: 0.08, ease: "power1.out" },
   },
   lift: {
-    small: { y: -2, duration: 0.15, ease: "power1.out" },
-    medium: { y: -4, duration: 0.15, ease: "power1.out" },
-    large: { y: -8, duration: 0.15, ease: "power1.out" },
+    small: { y: -2, duration: 0.08, ease: "power1.out" },
+    medium: { y: -4, duration: 0.08, ease: "power1.out" },
+    large: { y: -8, duration: 0.08, ease: "power1.out" },
   },
 } as const;
 
 export const ENTRANCE_ANIMATIONS = {
-  fadeIn: { opacity: 0, duration: 0.8, ease: "power2.out" },
-  slideUp: { y: 30, opacity: 0, duration: 0.8, ease: "power2.out" },
-  slideDown: { y: -30, opacity: 0, duration: 0.8, ease: "power2.out" },
-  scaleIn: { scale: 0.95, opacity: 0, duration: 0.8, ease: "power2.out" },
-  slideLeft: { x: -30, opacity: 0, duration: 0.8, ease: "power2.out" },
-  slideRight: { x: 30, opacity: 0, duration: 0.8, ease: "power2.out" },
+  fadeIn: { opacity: 0, duration: 0.4, ease: "power2.out" },
+  slideUp: { y: 30, opacity: 0, duration: 0.4, ease: "power2.out" },
+  slideDown: { y: -30, opacity: 0, duration: 0.4, ease: "power2.out" },
+  scaleIn: { scale: 0.95, opacity: 0, duration: 0.4, ease: "power2.out" },
+  slideLeft: { x: -30, opacity: 0, duration: 0.4, ease: "power2.out" },
+  slideRight: { x: 30, opacity: 0, duration: 0.4, ease: "power2.out" },
 } as const;
 
 export function hoverScale(

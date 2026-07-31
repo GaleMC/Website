@@ -10,13 +10,13 @@
 html {
   overflow-y: scroll;
   scrollbar-gutter: stable;
-  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
   transition:
-    background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [class*="bg-"],
@@ -28,7 +28,7 @@ footer,
 .card,
 [data-theme] {
   transition-property: background-color, border-color, color, fill, stroke;
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -42,7 +42,7 @@ textarea,
 .sun-and-moon > *,
 svg,
 path {
-  transition-duration: 0.15s;
+  transition-duration: 0.08s;
 }
 
 [class*="animate-"],
@@ -58,7 +58,7 @@ path {
 @supports (view-transition-name: none) {
   ::view-transition-old(root),
   ::view-transition-new(root) {
-    animation-duration: 0.3s;
+    animation-duration: 0.15s;
     animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

@@ -147,7 +147,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
   }
 
   .theme-toggle:hover {
@@ -212,39 +212,39 @@
 
   @media (prefers-reduced-motion: no-preference) {
     .sun-and-moon > .sun {
-      transition: transform 0.5s var(--ease-elastic-3);
+      transition: transform 0.25s var(--ease-elastic-3);
     }
 
     .sun-and-moon > .sun-beams {
       transition:
-        transform 0.5s var(--ease-elastic-4),
-        opacity 0.5s var(--ease-3);
+        transform 0.25s var(--ease-elastic-4),
+        opacity 0.25s var(--ease-3);
     }
 
     .sun-and-moon .moon > circle {
-      transition: transform 0.25s var(--ease-out-5);
+      transition: transform 0.12s var(--ease-out-5);
     }
 
     @supports (cx: 1) {
       .sun-and-moon .moon > circle {
-        transition: cx 0.25s var(--ease-out-5);
+        transition: cx 0.12s var(--ease-out-5);
       }
     }
 
     :global([data-theme="dark"]) .sun-and-moon > .sun {
       transition-timing-function: var(--ease-3);
-      transition-duration: 0.25s;
+      transition-duration: 0.12s;
       transform: scale(1.75);
     }
 
     :global([data-theme="dark"]) .sun-and-moon > .sun-beams {
-      transition-duration: 0.15s;
+      transition-duration: 0.08s;
       transform: rotateZ(-25deg);
     }
 
     :global([data-theme="dark"]) .sun-and-moon > .moon > circle {
-      transition-duration: 0.5s;
-      transition-delay: 0.25s;
+      transition-duration: 0.25s;
+      transition-delay: 0.12s;
     }
   }
 </style>
