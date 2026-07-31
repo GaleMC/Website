@@ -1,6 +1,6 @@
 <script lang="ts">
   import {
-    Unplug,
+    Equal,
     Play,
     Zap,
     Cpu,
@@ -14,7 +14,7 @@
     {
       titleKey: "features.zeroChanges.title",
       descriptionKey: "features.zeroChanges.description",
-      icon: Unplug,
+      icon: Equal,
     },
     {
       titleKey: "features.dropIn.title",
