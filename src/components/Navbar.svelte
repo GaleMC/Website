@@ -21,7 +21,7 @@
 
   const SOCIAL: NavbarItem[] = [
     {
-      href: siteConfig.links.github.org,
+      href: siteConfig.links.github.repo,
       translationKey: "nav.github",
       icon: GithubIcon,
     },

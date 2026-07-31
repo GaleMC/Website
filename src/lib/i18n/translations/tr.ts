@@ -113,7 +113,6 @@ export default {
     links: {
       githubRepo: "GitHub Deposu",
       downloads: "İndirilenler",
-      wiki: "Wiki",
       githubIssues: "GitHub Sorunları",
       license: "Lisans",
     },
