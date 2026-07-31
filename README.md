@@ -12,7 +12,7 @@ The official website for GaleMC.
 - **CSS**: [Tailwind CSS](https://tailwindcss.com)
 - **Animation**: [GSAP](https://gsap.com)
 - **Runtime**: [Bun](https://bun.sh)
-- **Icons**: [Lucide Icons](https://lucide.dev/)
+- **Icons**: [Lucide](https://lucide.dev/)
 - **Validation**: [Zod](https://zod.dev/)
 
 ## Available scripts
