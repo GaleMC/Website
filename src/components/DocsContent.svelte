@@ -115,11 +115,8 @@
         <h3 class="text-lg font-semibold text-[var(--foreground)] mb-3">
           {$t("docs.gettingStarted.whatIsGale.title")}
         </h3>
-        <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-          {$t("docs.gettingStarted.whatIsGale.body1")}
-        </p>
         <p class="text-sm text-neutral-400 leading-relaxed">
-          {$t("docs.gettingStarted.whatIsGale.body2")}
+          {@html $t("docs.gettingStarted.whatIsGale.body1")}
         </p>
       </div>
 
@@ -195,7 +192,7 @@
           {$t("docs.features.perf.title")}
         </h3>
         <p class="text-sm text-neutral-400 leading-relaxed mb-4">
-          {$t("docs.features.perf.subtitle")}
+          {@html $t("docs.features.perf.subtitle")}
         </p>
         <div class="grid gap-3 sm:grid-cols-2">
           {#each perfItems as { titleKey, descKey } (titleKey)}

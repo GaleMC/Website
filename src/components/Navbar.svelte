@@ -115,7 +115,7 @@
         <button
           type="button"
           onclick={() => (isOpen = !isOpen)}
-          class="p-2 text-neutral-500 hover:text-neutral-300 transition-colors"
+          class="p-2 text-neutral-500 hover:text-neutral-300 transition-colors cursor-pointer"
           aria-label={`${isOpen ? $t("common.close") : $t("common.open")} ${$t("nav.menu")}`}
           aria-expanded={isOpen}
         >
