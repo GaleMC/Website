@@ -1,7 +1,7 @@
 <script lang="ts">
   import {
-    CircleEqual,
-    Play,
+    Equal,
+    FilePlay,
     Zap,
     Cpu,
     Database,
@@ -14,12 +14,12 @@
     {
       titleKey: "features.zeroChanges.title",
       descriptionKey: "features.zeroChanges.description",
-      icon: CircleEqual,
+      icon: Equal,
     },
     {
       titleKey: "features.dropIn.title",
       descriptionKey: "features.dropIn.description",
-      icon: Play,
+      icon: FilePlay,
     },
     {
       titleKey: "features.optimizations.title",
